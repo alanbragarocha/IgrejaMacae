@@ -1,0 +1,297 @@
+:root {
+    --cor-navi: #153f00;
+    --cor-texto-nav: #fff;
+    --font-texto: 'Roboto', sans-serif; 
+    --cor-titulo: #000;
+    --cor-texto: #333;
+    --cor-card-pastor: #a5a4a4;
+    --cor-botao: #fff;
+    --cor-hover-botao: #153f00;
+    --font-tamanho-h1: 2.5rem; 
+    --font-tamanho-h2: 2rem; 
+    --font-tamanho-h3: 1.75rem; 
+    --font-tamanho-p: 1rem; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; 
+    font-family: var(--font-texto); 
+    line-height: 1.6; 
+}
+
+h1, h2, h3 {
+    font-weight: 700; 
+}
+
+h1 {
+    font-size: var(--font-tamanho-h1);
+    color: var(--cor-titulo);
+}
+
+h2 {
+    font-size: var(--font-tamanho-h2);
+    color: var(--cor-titulo);
+}
+
+h3 {
+    font-size: var(--font-tamanho-h3);
+    color: var(--cor-texto);
+}
+
+p {
+    font-size: var(--font-tamanho-p);
+    font-weight: 400; 
+    color: var(--cor-texto);
+    margin-bottom: 1rem; 
+}
+/* Header */
+.container-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--cor-navi);
+    position: sticky;
+    top: 0;
+    height: 5rem;
+}
+
+/* Estilo do logotipo */
+.logo img {
+    width: 6rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Estilo do menu */
+.menu ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-left: 1.5rem;
+}
+
+.menu ul li a {
+    font-size: 1rem;
+    
+    text-decoration: none;
+    color: var(--cor-texto-nav);
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: var(--cor-hover-botao);
+}
+
+/* Estilo do botão de menu para dispositivos móveis */
+#menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#menu-button img {
+    text-align: right;
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsividade */
+@media (max-width: 760px) {
+    .container-menu {
+        flex-direction: row;
+        height: 100%;
+        padding: 1rem 0;
+        width: 100%;
+    }
+
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+        background-color: var(--cor-navi);
+    }
+
+    .menu ul li {
+        width: 100%;
+        margin: 0;
+        padding: 1rem 1.5rem;
+    }
+
+    .menu.menu-open ul {
+        display: flex;
+    }
+
+    #menu-button {
+        display: block;
+        position: absolute;
+        top: 10px; /* Ajuste conforme necessário */
+        right: 10px; /* Ajuste conforme necessário */
+        border: 1px solid #ccc; /* Ajuste conforme necessário */
+        padding: 10px; /* Ajuste conforme necessário */
+    }
+}
+.conteudo {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.imagem-lutero {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.imagem-lutero img {
+    max-width: 100%;
+    height: auto;
+}
+
+.teses {
+    margin: 1rem 0;
+}
+
+.teses h3 {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 700px) {
+    .teses h3 {
+        margin-top: 1rem;
+    }
+    #menu-button img {
+        text-align: right;
+        width: 24px;
+        height: 24px;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 760px) {
+        .container-menu {
+            flex-direction: row;
+            height: 100%;
+            padding: 1rem 0;
+            width: 100%;
+        }
+    
+        .menu ul {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            text-align: left;
+            background-color: var(--cor-navi);
+        }
+    
+        .menu ul li {
+            width: 100%;
+            margin: 0;
+            padding: 1rem 1.5rem;
+        }
+    
+        .menu.menu-open ul {
+            display: flex;
+        }
+        #menu-button {
+            display: block;
+            position: absolute;
+            top: 10px; /* Ajuste conforme necessário */
+            right: 10px; /* Ajuste conforme necessário */
+            border: 1px solid #ccc; /* Ajuste conforme necessário */
+            padding: 10px; /* Ajuste conforme necessário */
+        }
+         p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .imagem-lutero{
+            margin: 1rem 0;
+    
+        }
+    }
+}
+
+
+/* Rodapé */
+
+footer {
+    background-color: var(--cor-navi);
+    padding: 1.25rem; /* 20px */
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    margin: 0.625rem; /* 10px */
+    flex: 1 1 250px; /* Mínimo de 250px para cada seção, cresce e encolhe */
+  }
+  
+  .footer-copyright p {
+    margin-top: 1.25rem; /* 20px */
+    font-size: 0.9rem; /* 0.9em pode ser mantido ou ajustado */
+    color: #fff;
+  }
+  
+  .footer-section {
+    color: #fff;
+    font-size: 0.9rem;
+  }
+  
+  .footer-section h3 {
+    color: #fff;
+    margin-bottom: 0.625rem; /* 10px */
+  }
+  
+  .social-media img {
+    width: 2.5rem; /* 40px */
+    margin: 0 0.3125rem; /* 5px */
+  }
+  
+  .app-links img {
+    width: 7.5rem; /* 120px */
+    margin: 0 0.3125rem; /* 5px */
+  }
+  
+  .footer-copyright {
+    margin-top: 1.25rem; /* 20px */
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  footer a {
+    text-decoration: none;
+  }
+  
+  /* Estilos Responsivos */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Altera a direção para coluna em telas menores */
+      align-items: center; /* Centraliza os itens */
+    }
+  
+    .footer-section {
+      flex: 1 1 100%; /* Cada seção ocupa 100% da largura */
+      margin: 0.625rem 0; /* Adiciona margem vertical */
+    }
+  
+    .social-media img  {
+      width: 2rem; /* Ajusta os ícones para um tamanho menor em telas menores */
+    }
+    .app-links img {
+      width: 7rem; /* Ajusta o tamanho do link do aplicativo para um tamanho menor em telas menores */
+    }
+  }
+    
